@@ -5,25 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 我的最愛圖式路徑 -->
     <link rel="icon" type="image/png" href="./img/bookmark.png" />
-    <title>192</title>
+    <title>193</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <h4>Cloud Bookmarks 雲端書籤列最後更新日期 2023/12/6</h4>
+    <h4>Cloud Bookmarks 雲端書籤列最後更新日期 2023/12/7</h4>
 <!-- 重點:由資料main.js檔案內的ary[]推動產生網頁 -->
 <!-- 依照陣列[ary]內有的圖片網址的網址產生大圖與縮圖 -->
 <!-- 依照陣列的長度產生按鈕 -->
     <!-- 大圖包框按鈕(目前不顯示中20231206 css > display:none) -->
     <div id="content"></div>
-
-    <!-- 大圖, url -->
-    <!-- 範例<a id="url" href="#" title="圖片超連結"><img src="圖片網址" alt="測試圖片" border="0"></a> -->
-    <!-- <a id="url" href="#" target="_blank" ><p><img id="pic"></p></a> -->
-    <a id="url" href="#" target="_blank" ><img id="pic" border="0"></a>
-    
-    <!--url功能已由大圖取代預計移除20231128  -->
-    <a id="url.old" href="#" target="_blank" >前往 >> </a>
 
     <!--書籤分類過濾預設不過濾 20231204測試 onchange=""選單改變 -->
     <select class="dropdown" id="mySelect" onchange="mySelectFunction()" name="書籤分類">
@@ -33,6 +25,16 @@
         <option value="金融">金融</option>
         <option value="偵錯">偵錯</option>
     </select>
+
+    <!-- 大圖, url -->
+    <!-- 範例<a id="url" href="#" title="圖片超連結"><img src="圖片網址" alt="測試圖片" border="0"></a> -->
+    <!-- <a id="url" href="#" target="_blank" ><p><img id="pic"></p></a> -->
+    <a id="url" href="#" target="_blank" ><img id="pic" border="0"></a>
+    
+    <!--url前往功能  -->
+    <a id="url.old" href="#" target="_blank" >前往 >> </a>
+
+
 
     <!-- 搜尋列功能 'onkeyup打一個字後馬上產生變化'-->
     <form action="" class="search">

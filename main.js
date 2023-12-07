@@ -1,7 +1,8 @@
 
 // 這是陣列放網址圖片用使用ary[0]為預設圖片
-// 設定公用變數 (重要的資料)
+// 處理過的資料
 let ary=[];
+// 設定公用變數 (重要的資料)
 let aryOld = [
     
     {title:'Google',
@@ -172,11 +173,121 @@ let aryOld = [
     url:'https://github.com/',
     notes: 'none',   },
 
+    {title:'GitHub Desktop',
+    kind:'教學',
+    poster:'./img/github_desktop.svg',
+    url:'https://github.com/',
+    notes: 'GitHub視窗桌面同步程式',   },
+
+    {title:'Figma',
+    kind:'教學',
+    poster:'./img/figma_logo.svg',
+    url:'https://www.figma.com/',
+    notes: '向量圖形編輯器和原型設計工具，主要基於網頁進行工作',   },
+
+    {title:'Figma老師分享案例',
+    kind:'教學',
+    poster:'./img/figma_share.png',
+    url:'https://www.figma.com/file/AVAQRNYRwrYryCJ71mbniE/%E5%AD%B8%E5%93%A1%E7%B7%B4%E7%BF%92%E3%80%81%E7%AF%84%E4%BE%8B%E5%8D%80?type=design&node-id=76-260&mode=design&t=kvdqn5j1RMEKV4VO-0',
+    notes: 'Figma老師分享案例',   },
+
+    {title:'網頁前端技術應用',
+    kind:'教學',
+    poster:'./img/gg.png',
+    url:'http://gg.gg/js202311',
+    notes: 'none',   },
+
+    {title:'CodePen',
+    kind:'教學',
+    poster:'./img/codepen_logo.svg',
+    url:'https://codepen.io/',
+    notes: 'none',   },
+
+    {title:'w3schools',
+    kind:'教學',
+    poster:'./img/w3schools_logo.svg',
+    url:'https://www.w3schools.com/',
+    notes: 'none',   },
+
+    {title:'CanIuse',
+    kind:'教學',
+    poster:'./img/caniuse.png',
+    url:'https://caniuse.com/',
+    notes: '查詢語法指令在不同瀏覽器是否可用',   },
+
+    {title:'Freepik',
+    kind:'教學',
+    poster:'./img/freepik_logo.svg',
+    url:'https://www.freepik.com',
+    notes: 'Freepik免費圖庫',   },
+
+    {title:'picsum.photos假圖產生',
+    kind:'教學',
+    poster:'./img/picsum.png',
+    url:'https://picsum.photos/',
+    notes: 'Lorem Picsum方便好用的假圖產生器',   },
+
+    {title:'fakeimg.pl假圖產生',
+    kind:'教學',
+    poster:'./img/fakeimg.png',
+    url:'https://fakeimg.pl/',
+    notes: '就是假圖300x300方便好用的假圖產生器',   },
+
+    {title:'ui-buttons按鈕設計',
+    kind:'教學',
+    poster:'./img/uibuttons.png',
+    url:'https://ui-buttons.web.app/',
+    notes: '不同的按鈕設計效果與方法',   },
+
+    {title:'html5up下載模板',
+    kind:'教學',
+    poster:'./img/html5up.svg',
+    url:'https://html5up.net/',
+    notes: '下載漂亮的 HTML5 網站模板',   },
+
+    {title:'statcounter瀏覽器使用率統計',
+    kind:'教學',
+    poster:'./img/statcounter.png',
+    url:'https://gs.statcounter.com/',
+    notes: '瀏覽器總類與螢幕大小使用統計',   },
+
+    {title:'壽司CSS選擇器遊戲',
+    kind:'教學',
+    poster:'./img/flukeout.png',
+    url:'https://flukeout.github.io/',
+    notes: 'CSS選擇器遊戲',   },
+
+    {title:'色碼表',
+    kind:'教學',
+    poster:'./img/ifreesite.png',
+    url:'https://www.ifreesite.com/color/web-color-code.htm',
+    notes: '適合所有人的顏色',   },
+
+    {title:'ColorReview',
+    kind:'教學',
+    poster:'./img/colorreview.png',
+    url:'https://color.review',
+    notes: '顏色中不同的對比判斷',   },
+
+
+    
+    {title:'台灣銀行網路銀行',
+    kind:'金融',
+    poster:'./img/bot_logo.svg',
+    url:'https://ebank.bot.com.tw/',
+    notes: '台銀活儲 046004675754',   },
+
+    {title:'兆豐信用卡e化繳費平台',
+    kind:'金融',
+    poster:'./img/megabank.svg',
+    url:'https://www.mega-payment.com/',
+    notes: '繳款編號 51125120224426 台銀活儲 046004675754',   },
+
     {title:'台新銀行網路銀行',
     kind:'金融',
     poster:'./img/taishin_logo.svg',
     url:'https://my.taishinbank.com.tw/',
-    notes: 'none',   },
+    notes: '台新薪資帳戶 2017-10-0030968-7',   },
 
     {title:'SpeedTest網路測速',
     kind:'偵錯',
