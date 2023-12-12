@@ -167,6 +167,12 @@ let aryOld = [
     url:'https://tw.news.yahoo.com/',
     notes: 'none',  },
 
+    {title:'資安月報',
+    kind:'應用',
+    poster:'./img/ithome_news.png',
+    url:'https://www.ithome.com.tw/tags/%E8%B3%87%E5%AE%89%E6%9C%88%E5%A0%B1',
+    notes: '資安月報',  },
+
     {title:'GitHub',
     kind:'教學',
     poster:'./img/github_logo.svg',
@@ -209,6 +215,42 @@ let aryOld = [
     url:'https://www.w3schools.com/',
     notes: 'none',   },
 
+    {title:'AI tree 尋找AI工具',
+    kind:'教學',
+    poster:'./img/aitree.png',
+    url:'https://aitree.io/',
+    notes: 'AI工具分類與報告',   },
+
+    {title:'gamma AI報告',
+    kind:'教學',
+    poster:'./img/gamma_logo.png',
+    url:'https://gamma.app/',
+    notes: 'AI生成pdf或ppt報告',   },
+
+    {title:'Leonardo AI生圖人像漫畫',
+    kind:'教學',
+    poster:'./img/leonardo_logo.svg',
+    url:'https://app.leonardo.ai/',
+    notes: 'AI生成圖片人像漫畫類',   },
+
+    {title:'Lexica AI生圖人像漫畫',
+    kind:'教學',
+    poster:'./img/lexica_logo.png',
+    url:'https://lexica.art/',
+    notes: 'AI生成圖片人像漫畫類',   },
+
+    {title:'civitai AI生圖漫畫',
+    kind:'教學',
+    poster:'./img/civitai.png',
+    url:'https://civitai.com/',
+    notes: 'AI生成圖片人像漫畫類',   },
+
+    {title:'tensor AI生圖漫畫',
+    kind:'教學',
+    poster:'./img/tensor.png',
+    url:'https://tensor.art/',
+    notes: 'AI生成圖片人像漫畫類',   },
+
     {title:'CanIuse',
     kind:'教學',
     poster:'./img/caniuse.png',
@@ -233,6 +275,12 @@ let aryOld = [
     url:'https://fakeimg.pl/',
     notes: '就是假圖300x300方便好用的假圖產生器',   },
 
+    {title:'CSS搖動',
+    kind:'教學',
+    poster:'./img/csshake.png',
+    url:'https://elrumordelaluz.github.io/csshake/',
+    notes: 'CSS搖動',   },
+
     {title:'ui-buttons按鈕設計',
     kind:'教學',
     poster:'./img/uibuttons.png',
@@ -245,11 +293,17 @@ let aryOld = [
     url:'https://html5up.net/',
     notes: '下載漂亮的 HTML5 網站模板',   },
 
-    {title:'statcounter瀏覽器使用率統計',
+    {title:'各年度Top30最受歡迎的JS',
     kind:'教學',
-    poster:'./img/statcounter.png',
-    url:'https://gs.statcounter.com/',
-    notes: '瀏覽器總類與螢幕大小使用統計',   },
+    poster:'./img/jqueryscript.png',
+    url:'https://www.jqueryscript.net/popular/2023.html',
+    notes: '各年度Top30最受歡迎的JS',   },
+
+    {title:'bestjquery最受歡迎的JS',
+    kind:'教學',
+    poster:'./img/bestjquery.png',
+    url:'https://www.bestjquery.com/',
+    notes: '最受歡迎的JS',   },
 
     {title:'壽司CSS選擇器遊戲',
     kind:'教學',
@@ -283,11 +337,23 @@ let aryOld = [
     url:'https://www.mega-payment.com/',
     notes: '繳款編號 51125120224426 台銀活儲 046004675754',   },
 
+    {title:'永豐信用卡繳費網',
+    kind:'金融',
+    poster:'./img/sinopac_logo.svg',
+    url:'https://paybill.sinopac.com/',
+    notes: '台銀活儲 046004675754',   },
+
     {title:'台新銀行網路銀行',
     kind:'金融',
     poster:'./img/taishin_logo.svg',
     url:'https://my.taishinbank.com.tw/',
     notes: '台新薪資帳戶 2017-10-0030968-7',   },
+
+    {title:'勞保局e化服務系統',
+    kind:'金融',
+    poster:'./img/bli.png',
+    url:'https://edesk.bli.gov.tw/',
+    notes: '查詢勞保',   },
 
     {title:'SpeedTest網路測速',
     kind:'偵錯',
@@ -299,8 +365,22 @@ let aryOld = [
     kind:'偵錯',
     poster:'./img/ipaddress.png',
     url:'https://www.ipaddress.com/',
-    notes: '顯示你的IP與目前位置',   }
+    notes: '顯示你的IP與目前位置',   },
 
+    {title:'showip',
+    kind:'偵錯',
+    poster:'./img/showip.png',
+    url:'https://showip.net/',
+    notes: '顯示你的IP與目前位置',   },
+
+    {title:'測試您的 IPv6 連線',
+    kind:'偵錯',
+    poster:'./img/testipv6.png',
+    url:'https://test-ipv6.com/',
+    notes: '可以偵測到IPV6',   },   
+
+
+    
  ];
 
  /**
@@ -319,6 +399,7 @@ let aryOld = [
 
 
   // 這面這行就是告訴電腦我想要怎麼過濾aryOld[陣列]
+  /* 過濾條件 function filter()  */
   /* 過濾條件 "偵錯" '教學' '應用' '金融' 字串完全相同只有一字不行  */
   /* 可以用 != 不等於  == 全等 &&(and) ||(or) 全不是 */
   /* 可用範例 " e.kind == '偵錯' || e.kind =='應用' " 結果會出現偵錯與應用 */
@@ -366,7 +447,7 @@ let aryOld = [
       //語法成功>結果失敗>全部出現> ary = aryOld.filter(e => e.title ='IP' );
       
       //filter = search.toUpperCase(); //將小寫字改為大寫
-      filter = search.toLowerCase(); //將大寫字改為小寫(建議使用)
+      filter = search.toLowerCase(); //將大寫字改為小寫(預設小寫建議使用)
       //filter = search; //不改變大小寫
       
       // console.log("我的搜尋關鍵字將大寫字改為小寫.. " + filter);
@@ -381,7 +462,8 @@ let aryOld = [
       // ary = aryOld.filter(e => e.title.indexOf(filter) != -1 );
       // ary = aryOld.filter(e => e.title.toLowerCase().indexOf(filter) != -1 ); //方法1
       // ary = aryOld.filter(e => e.title.toLowerCase().indexOf(filter) > -1 ); //方法2
-      ary = aryOld.filter(e => e.title.toLowerCase().indexOf(filter) > -1 ); //方法2
+      //語法成功可以搜尋抬頭與註解// ary = aryOld.filter(e => e.title.toLowerCase().indexOf(filter) > -1 || e.notes.toLowerCase().indexOf(filter) > -1); //新方法兩個過濾
+      ary = aryOld.filter(e => e.title.toLowerCase().indexOf(filter) > -1 || e.notes.toLowerCase().indexOf(filter) > -1 || e.kind.toLowerCase().indexOf(filter) > -1); //新方法三個過濾
 
       // console.log("我的搜尋關鍵字產生的新陣列.. " + ary );
       init();
@@ -394,9 +476,9 @@ let aryOld = [
   function change(idx) {
     // 依點選畫面i=1 or 2 or x 變化陣列位置[ary,0,1,2...5]傳入參數改變'大圖網址(pic)'與'網站網址(url)'
     let s_title  = ary[idx].title; //標題
-    let s_kind   = ary[idx].kind; //發行年度
-    let s_poster = ary[idx].poster; //圖片路經
-    let s_url = ary[idx].url; //說明網址
+    let s_kind   = ary[idx].kind; //網站分類
+    let s_poster = ary[idx].poster; //網站logo圖片路經
+    let s_url = ary[idx].url; //網站網址
     let s_notes = ary[idx].notes; //註解說明
     
     //陣列內容ary[0,1,..到最後一筆資料]為陣列資料分別存入變數pic與變數url中給程式使用
