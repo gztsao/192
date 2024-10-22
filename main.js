@@ -5,7 +5,13 @@ let ary=[];
 // 設定公用變數 (重要的資料)
 let aryOld = [
     
-    {title:'Google',
+  {title:'ChatGPT',
+    kind:'應用',
+    poster:'./img/chatgpt_logo.svg',
+    url:'https://chatgpt.com/',
+    notes: 'none',  },
+
+  {title:'Google',
     kind:'應用',
     poster:'./img/google_logo.svg',
     url:'https://www.google.com',
@@ -131,13 +137,13 @@ let aryOld = [
     url:'https://www.google.com/appsstatus/',
     notes: 'none',  },
 
-    {title:'遠雄人壽',
+    {title:'遠雄人壽 fglife',
     kind:'應用',
     poster:'./img/farglorylife.jpg',
     url:'https://www.fglife.com.tw/',
     notes: 'none',  },
 
-    {title:'富揚資訊',
+    {title:'富揚資訊 ADcom',
     kind:'應用',
     poster:'./img/adcom.jpg',
     url:'https://www.adcom.com.tw/',
@@ -167,7 +173,7 @@ let aryOld = [
     url:'https://tw.news.yahoo.com/',
     notes: 'none',  },
 
-    {title:'資安月報',
+    {title:'資安月報 ithome',
     kind:'應用',
     poster:'./img/ithome_news.png',
     url:'https://www.ithome.com.tw/tags/%E8%B3%87%E5%AE%89%E6%9C%88%E5%A0%B1',
@@ -197,7 +203,7 @@ let aryOld = [
     url:'https://www.figma.com/file/AVAQRNYRwrYryCJ71mbniE/%E5%AD%B8%E5%93%A1%E7%B7%B4%E7%BF%92%E3%80%81%E7%AF%84%E4%BE%8B%E5%8D%80?type=design&node-id=76-260&mode=design&t=kvdqn5j1RMEKV4VO-0',
     notes: 'Figma老師分享案例',   },
 
-    {title:'網頁前端技術應用',
+    {title:'網頁前端技術應用gg',
     kind:'教學',
     poster:'./img/gg.png',
     url:'http://gg.gg/js202311',
@@ -325,31 +331,31 @@ let aryOld = [
 
 
     
-    {title:'台灣銀行網路銀行',
+    {title:'台灣銀行網路銀行 bot',
     kind:'金融',
     poster:'./img/bot_logo.svg',
     url:'https://ebank.bot.com.tw/',
     notes: '台銀活儲 046004675754',   },
 
-    {title:'兆豐信用卡e化繳費平台',
+    {title:'兆豐信用卡e化繳費平台 megabank',
     kind:'金融',
     poster:'./img/megabank.svg',
     url:'https://www.mega-payment.com/',
     notes: '繳款編號 51125120224426 台銀活儲 046004675754',   },
 
-    {title:'永豐信用卡繳費網',
+    {title:'永豐信用卡繳費網 sinopac',
     kind:'金融',
     poster:'./img/sinopac_logo.svg',
     url:'https://paybill.sinopac.com/',
     notes: '台銀活儲 046004675754',   },
 
-    {title:'台新銀行網路銀行',
+    {title:'台新銀行網路銀行 taishin',
     kind:'金融',
     poster:'./img/taishin_logo.svg',
     url:'https://my.taishinbank.com.tw/',
     notes: '台新薪資帳戶 2017-10-0030968-7',   },
 
-    {title:'勞保局e化服務系統',
+    {title:'勞保局e化服務系統 bli',
     kind:'金融',
     poster:'./img/bli.png',
     url:'https://edesk.bli.gov.tw/',
@@ -379,6 +385,47 @@ let aryOld = [
     url:'https://test-ipv6.com/',
     notes: '可以偵測到IPV6',   },   
 
+    {title:'GitHub 192-0955',
+    kind:'偵錯',
+    poster:'./img/github_desktop.svg',
+    url:'https://gztsao.github.io/192/0955123221.html',
+    notes: '',   },
+
+    {title:'GitHub 192',
+    kind:'偵錯',
+    poster:'./img/github_desktop.svg',
+    url:'https://gztsao.github.io/192/',
+    notes: '',   },
+
+    {title:'GitHub 193-0955',
+    kind:'偵錯',
+    poster:'./img/github_desktop.svg',
+    url:'https://gztsao.github.io/193/0955123221.html',
+    notes: '',   },
+
+    {title:'GitHub 193',
+    kind:'偵錯',
+    poster:'./img/github_desktop.svg',
+    url:'https://gztsao.github.io/193/',
+    notes: '',   },
+
+    {title:'GitHub 194-0955',
+    kind:'偵錯',
+    poster:'./img/github_desktop.svg',
+    url:'https://gztsao.github.io/194/0955123221.html',
+    notes: '',   },
+
+    {title:'GitHub 194',
+    kind:'偵錯',
+    poster:'./img/github_desktop.svg',
+    url:'https://gztsao.github.io/194/',
+    notes: '',   },
+
+    {title:'GitHub ch15',
+    kind:'偵錯',
+    poster:'./img/github_desktop.svg',
+    url:'https://gztsao.github.io/ch15/',
+    notes: '',   },
 
     
  ];
@@ -465,12 +512,16 @@ let aryOld = [
       //語法成功可以搜尋抬頭與註解// ary = aryOld.filter(e => e.title.toLowerCase().indexOf(filter) > -1 || e.notes.toLowerCase().indexOf(filter) > -1); //新方法兩個過濾
       ary = aryOld.filter(e => e.title.toLowerCase().indexOf(filter) > -1 || e.notes.toLowerCase().indexOf(filter) > -1 || e.kind.toLowerCase().indexOf(filter) > -1); //新方法三個過濾
 
+      /*****測試要將按鈕恢復為全選（預設值）不然畫面怪怪的可能已經分類為金融*/
+      // console.log("目前搜尋下拉選擇鈕值為 " + document.getElementById('mySelect').value);
+      document.getElementById('mySelect').value = "全選" ;
+
       // console.log("我的搜尋關鍵字產生的新陣列.. " + ary );
       init();
     }
 
   // 選擇的圖片的按鈕id btn_id[1,2,3...] 存入公用變數中將來可用
-  let pic = '';  // 大圖網址
+  let pic = '';  //網站logo圖片路經// 大圖網址
   
   // 定義各函式
   function change(idx) {
@@ -482,7 +533,7 @@ let aryOld = [
     let s_notes = ary[idx].notes; //註解說明
     
     //陣列內容ary[0,1,..到最後一筆資料]為陣列資料分別存入變數pic與變數url中給程式使用
-    pic = s_poster; //大圖網址
+    pic = s_poster; //網站logo圖片路經//大圖網址
     url = s_url; //網站網址
      console.log('陣列位置 ' + idx); //陣列位置
      console.log('大圖網址 ' + pic); //大圖網址
@@ -491,6 +542,8 @@ let aryOld = [
     render(); //進入產生大圖函數
   }
   
+
+  // 依按鈕圖示產生不同的變化預設為arry[0]
   function render() { //傳入變數'pic'與'url'產生1.大圖 與 2.點選後前往的網址
     // 條件為id="pic"的位置更新大圖ary[idx].poster(大圖網址)畫面
     document.getElementById('pic').src = pic;
@@ -500,6 +553,26 @@ let aryOld = [
 
     // 條件為id="url.old"的位置更新網站網址
     document.getElementById('url.old').href = url;
+
+    // 條件為id="qrcode"的位置更新網站網址並產生 QR code "變數rul"
+    // let QRcode = "https://www.google.com"; //無效ans."eferenceError: Can't find variable: QRCode"
+    document.getElementById('qrcode').innerHTML = ""; //先將qrcode清空下一行產生新qrcode
+
+    console.log("QRCode網址為 >> " +url);
+    document.getElementById('qrcode_text').innerHTML = "<p>QRCode網址為 >> " + url + "</p>";        
+
+    //new QRCode(document.getElementById('qrcode'), url ); //方法1
+    let qrcode = new QRCode(document.getElementById("qrcode"), { //方法2
+      text: url,//將網址放入參數中
+      width: 128,
+      height: 128,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.Q //容错级别//由低到高 .L M Q H
+    });
+
+    
+
   }
   
   function init() {
