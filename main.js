@@ -403,6 +403,12 @@ let aryOld = [
     url:'https://showip.net/',
     notes: '顯示你的IP與目前位置',   },
 
+    {title:'IPthreat檢查IP是否為歷史黑名單',
+      kind:'偵錯',
+      poster:'./img/ipthreat.png',
+      url:'https://ipthreat.net/ip/1.1.1.1',
+      notes: '檢查IP是否為歷史黑名單',   },
+
     {title:'測試您的 IPv6 連線',
     kind:'偵錯',
     poster:'./img/testipv6.png',
