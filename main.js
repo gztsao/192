@@ -403,11 +403,29 @@ let aryOld = [
     url:'https://showip.net/',
     notes: '顯示你的IP與目前位置',   },
 
+    {title:'AbuseIPDB檢查IP是否為歷史黑名單',
+      kind:'偵錯',
+      poster:'./img/abuseipdb-logo.svg',
+      url:'https://www.abuseipdb.com/check/8.8.8.8',
+      notes: '檢查IP是否為歷史黑名單',   },
+
     {title:'IPthreat檢查IP是否為歷史黑名單',
       kind:'偵錯',
       poster:'./img/ipthreat.png',
       url:'https://ipthreat.net/ip/1.1.1.1',
       notes: '檢查IP是否為歷史黑名單',   },
+
+      {title:'Shodan 專門找聯網IP駭客搜尋引擎只有IP有開放的port與歷史資訊',
+        kind:'偵錯',
+        poster:'./img/shodan.png',
+        url:'https://www.shodan.io/host/60.250.65.90',
+        notes: '找聯網IP駭客搜尋引擎',   },
+
+    {title:'VirusTotal',
+      kind:'偵錯',
+      poster:'./img/virustotal_logo.svg',
+      url:'https://www.virustotal.com/gui/home/upload',
+      notes: 'VirusTotal檢查IP與檔案快速檢測',   },
 
     {title:'測試您的 IPv6 連線',
     kind:'偵錯',
